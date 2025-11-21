@@ -1,0 +1,452 @@
+---
+title: 'Learn Coding'
+author: 'ale66'
+format: 
+  revealjs:
+    footer: '[github.com/ale66/learn-coding](https://github.com/ale66/learn-coding)&nbsp;&nbsp;&nbsp;'
+    theme: [moon]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 2
+from: markdown+emoji
+execute:
+  echo: true
+---
+
+# Exam project
+
+---
+
+## Type: a replication study
+
+We often read of data-driven Social science analyses
+
+Let's replicate such studies with our own coding
+
+and, possibly, use it as a base for further discoveries
+
+---
+
+## Topic:
+
+Can you convincingly replicate the findings of
+
+Chan et al., *Four best practices for measuring news sentiment using ‘off-the-shelf’ dictionaries: a large-scale p-hacking experiment*
+
+[Comp. Communication Res., 2021](https://journal.computationalcommunication.org/article/view/4731)
+
+code is available at [github.com/chainsawriot/ots](https://github.com/chainsawriot/ots)
+
+N.B. not all findings need replication: precise instructions will follow
+
+Operations will be on GitHub: [sps-unimi-it-c4css-2025-26]()
+
+
+---
+
+## Evaluation metrics:
+
+- correctness (syntactical & semantical)
+
+- code quality: is it clear? Is it easy to reuse/maintain?
+
+- presentation: graphics etc.
+  
+- veracity: can the student explain their code line-by-line?
+
+
+# How to: GitHub Classroom
+
+
+---
+
+## Git: a method 
+
+*coding* is not even half of the story
+
+*debugging* requires deep understanding of 
+
+- the computational problem at hand
+- the data
+- the tools (Python)
+
+*maintaining* also takes time
+
+. . .
+
+*Regression:* it used to work but not anymore
+
+---
+
+Git supports collaboration in software
+
+the codebase is centralised and receives contributions
+
+one can *branch* a codebase to develop and test ideas.
+
+![](./imgs/git-basics.png)
+
+
+---
+
+## Main commands
+
+```bash
+git create myrepo
+```
+
+```bash
+git clone mycompanyrepo
+```
+
+More than one copy of the repo can be cloned in different parts of the same computer
+
+
+```bash
+git brach mycompanyrepo
+```
+
+---
+
+```bash
+git pull
+```
+
+reads a 'secret' `.git` folder inside the top folder of the repo
+
+---
+
+```bash
+git add newfile.py
+```
+
+from now on, also `newfile.py` will be versioned
+
+```bash
+git status
+```
+
+what has been changed since the last version?
+
+---
+
+## The key commands
+
+```bash
+git commit -m "This is what I did: cleaned some code and added newfile.py"
+```
+
+cristallises a new version
+
+---
+
+```bash
+git push
+```
+
+update the codebase to my current version 
+
+To protect the codebase, destructive updates are treated by creating a branch
+
+```bash
+git merge
+```
+
+Proceed with caution...
+
+
+# GitHub
+
+---
+
+## GitHub
+
+A cloud platform to support collaborative coding
+
+in principle, all code is public
+
+We can clone, make changes, commit them in our local repository then send a *pull request* to the owner of the repo for our changes to be incorporated.
+
+. . .
+
+Knowing Git/GH is a critical skill today
+
+A GH *portfolio* speak for our skills
+
+
+# GitHub Classroom
+
+---
+
+GH Classroom helps learning by
+
+- distributing coding assignments
+- managing student repositories automatically
+- providing feedback through GitHub
+- tracking progress
+
+---
+
+## The GH Classroom workflow
+
+1. instructor creates an assignment
+2. student receives an invitation link
+3. s. accept the assignment → GitHub auto-creates his/her own repo
+4. s. clones the repo and work on it
+5. s. pushes their changes (the submission)
+6. i. reviews work on GitHub
+
+---
+
+Try the starter course:
+
+```bash 
+git clone https://github.com/sps-unimi-it/github-starter-course
+```
+
+![](./imgs/starter-course.png)
+
+
+# For reference: student instructions
+
+---
+
+The following material is from the GitHub Classroom admin pages
+
+---
+
+## Accepting an Assignment
+
+instructor will share a link like:
+
+`https://github.com/sps-unimi-it/c4css-2025-26`
+
+when student clicks, it:
+
+1. authorizes GitHub Classroom (first time only)
+2. accepts the assignment
+3. creates a personal repo on GH classroom
+
+The repo name is usually: `c4css-2025-26-yourGitHubUsername`
+
+---
+
+## First steps
+
+After accepting, you'll see a repository URL:
+
+```bash
+git clone https://github.com/sps-unimi-it/c4css-2025-26-yourname.git
+
+cd c4css-2025-yourname
+```
+
+The repository contains:
+
+- Assignment instructions (usually in README.md)
+- Starter code or templates
+- Test files (sometimes)
+
+---
+
+## Working on Your Assignment
+
+You already know how to:
+
+- `git clone` - get the repository, *una tantum*
+  
+- `git pull` - get updates from instructors
+
+Now you'll work locally, editing files in your favorite editor or IDE.
+
+---
+
+## Saving Your Work: The Git Workflow
+
+To submit your work, you need to send your changes back to GitHub.
+
+This involves three new commands:
+
+1. `add` - Stage your changes
+2. `commit` - Save a snapshot with a message
+3. `push` - Send commits to GitHub
+
+
+---
+
+## Step 1: `git add`
+
+selecting files to be included the next save point.
+
+```bash
+# Add a specific file
+git add homework.ipynb
+```
+
+```bash
+# Add a specific file
+git add homework.ipynb
+
+# Add all changed files
+git add .
+
+# or
+git add --all
+```
+
+`git status` shows what's staged and what's not.
+
+---
+
+## Step 2: `git commit`
+
+A commit is like a save point in a game - it records your changes with a descriptive message.
+
+```bash
+git commit -m "Complete question 1 and 2"
+```
+
+The message should briefly describe what you changed.
+
+**Good messages:**
+
+- "Fix bug in calculation function"
+- "Add solutions for problems 3-5"
+
+**Meh messages:**
+
+- "stuff"
+- "changes"
+
+---
+
+## Step 3: `git push`
+
+This uploads your commits from your computer to GitHub.
+
+```bash
+git push
+```
+
+That's it: the new version now visible to the instructors
+
+**N.B.** submitting = the last push before the deadline
+
+---
+
+## Complete Workflow Example
+
+```bash
+# Make changes to your files in your editor
+# Then in terminal:
+
+git status                    # See what changed
+git add solution.py          # Stage the file
+git commit -m "Add solution to problem 1"
+git push                     # Upload to GitHub
+
+# Continue working...
+git add tests.py readme.md
+git commit -m "Add tests and update readme"
+git push
+```
+
+---
+
+## Best Practices
+
+**Commit Often**
+- Make small, logical commits
+- Don't wait until everything is done
+
+**Push Regularly**
+- Backup your work to GitHub
+- Avoid last-minute technical issues
+
+**Write Clear Messages**
+- Helps you track your progress
+- Helps instructors understand your work
+
+---
+
+## Common Scenarios
+
+**Getting instructor updates:**
+
+```bash
+git pull
+```
+
+**Made changes but want to see status:**
+
+```bash
+git status
+```
+
+**Forgot to push before deadline?**
+
+- commits are timestamped locally
+
+- push ASAP and notify instructors
+
+---
+
+## Troubleshooting Tips
+
+**"Your branch is behind..."**
+- Someone else pushed changes
+- Run `git pull` first, then push
+
+**Forgot to commit?**
+- Your changes are local only
+- `git add` and commit before pushing
+
+**Need help?**
+- Check `git status` for hints
+- Ask your instructor or TA
+- GitHub Classroom interface shows submission status
+
+---
+
+## Viewing Your Submission
+
+After pushing, visit your repository on GitHub:
+
+`https://github.com/sps-unimi-it/c4css-2025-26-yourname.git`
+
+- see all your files and chronology of commits
+
+- check the timestamp of your last push
+
+- read instructors' feedback (in Issues or PR comments)
+
+---
+
+## Deadlines and Submissions
+
+**Key points:**
+
+- your latest push before the deadline = your submission
+- all commits are timestamped
+- you can push updates until the deadline
+- for simple tasks there is auto-grading (instant feedback)
+
+---
+
+## Quick Reference
+
+```bash
+# Get the assignment
+git clone <repo-url>
+
+# Check status
+git status
+
+# Save and submit workflow
+git add <files>
+git commit -m "descriptive message"
+git push
+
+# Get updates
+git pull
+```
