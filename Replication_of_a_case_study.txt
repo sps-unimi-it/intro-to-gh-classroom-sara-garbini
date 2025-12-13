@@ -1,0 +1,55 @@
+Key steps and features of the experiment: https://journal.computationalcommunication.org/article/view/4731
+
+“Off-the-shelf” dictionaries -> examination of 37 sentiment scores on large news corpus. The main focus is the relationship between news sentiment and U.S. presidential approval.
+1.	To use a suitable sentiment dictionary
+2.	The reliability and validity of the dictionary isn’t ‘built-in”
+3.	The content length matter
+4.	Multiple dictionaries are not suitable for testing the same hypothesis
+It is used a dictionary to classify a piece of text by positive or negative sentiment.
+The main problems of the off-the-shelf dictionaries are both methodological and theoretical.
+-	The bag-of-words assumption
+-	The grammatical functions of words do not matter
+-	The additivity assumption -> more sentiment words, higher lever of actual sentiment
+Lexicoder - > negated version of the dictionary (not goog and good bye are not  classified as positive)
+
+THE DOMAIN-SPECIFICIY PROBLEM
+Solution proposal: to reframe words related to a specific domain
+
+Sentiment -> the writer’s appraisal or feeling
+LIWC -> argues that the language and behavior are linked
+In this study -> sentiment as emotions expressed in a news article
+
+Study conduction
+First part -> analysis of a set of dictionary-based sentiment scores
+Relationship between news sentiment and presidential approval
+Extremes in news sentiment = extremes in presidential approval
+Two main variables:
+-	News sentiment
+-	Presidential approval
+Presidential approval rating time series (since 1943)
+News sentiment time series (date of publication, content length and sentiment scores)
+-	From June 1, 1980 to January 31, 2006
+-	Lowercase and tokenized articles
+
+Dictionaries:
+GI (GI+ and GI-), BL, LIWC (total affect, positive emotions, negative emotions, anxiety, anger and sadness), ANEW (ANEW valence, ANEW arousal, ANEW dominance), DAL (pleasantness, activation and imagery) MFD (MF Harm+, MF Harm-, MF Fairness +, MF Fairness -, MF Ingroup-, MF Authority+, MF Authority -, MF Purity+, MF Purity-), NRC (NRC Joy, NRC Anticipation, NRC Trust, NRC Surprise, NRC Fear, NRC Anger, NRC Disgust, NRC Sadness, NRC +, NRC -), LSD (LSD nettone and KSD absolute). (at-a-glance file).
+
+Validity measurement:
+-	Convergent validity
+-	Structural validity (SVD)
+
+Daily Time Series
+The first step was to convert the millions of individual sentiment scores (one per article) into a regular time series, a single value per day.
+
+A bivariate Granger causality test 
+To test first the 37 sentiment scores with presidential approval
+They did again the test using the subset of articles with the names of the Presidents (presidential news)
+Moreover, they changed the dependent variable of the presidential approval to the University of Michigan Consumer Sentiment Index and at the end some random noise.
+
+Validity measurements
+Positive and negative news sentiment may occur simultaneously
+There is the possibility of a third variable -> article length
+
+Granger causality
+Article length as the Granger causes of presidential approval 
+New variable = article length
