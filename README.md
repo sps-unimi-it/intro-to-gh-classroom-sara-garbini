@@ -13,7 +13,7 @@ The study serves as a **methodological replication** of the critical framework p
 
 ---
 
-### 🛠 Methodology & Workflow
+### Methodology & Workflow
 
 The analysis was conducted using **Python** (Pandas, Matplotlib, NumPy) and followed this specific execution order:
 
