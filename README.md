@@ -38,7 +38,7 @@ Comparing the **Normalized Sentiment** (the correct metric) with Presidential Ap
 * **BING Correlation:** $r \approx -0.13$ (Weak negative correlation).
 * **NRC Correlation:** $r \approx -0.30$ (Negative correlation).
 
-![Final Results Plot](./Results/bias_plot.png)
+![Final Results Plot](./Results/results_plot.png)
 
 This result suggests that generic "off-the-shelf" dictionaries fail to predict public opinion. A speech classified as "positive" by the algorithm does not correspond to an increase in approval ratings.
 
