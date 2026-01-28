@@ -1,4 +1,4 @@
-# 🇺🇸 Sentiment Analysis of political texts: A Replication Study
+# Sentiment Analysis of political texts: A Replication Study
 
 ### Project Overview
 This project performs a computational analysis of **US Presidential Speeches** (from Truman to Obama) to evaluate the reliability of automated sentiment analysis tools within political science.
@@ -53,9 +53,9 @@ Our retrospective check confirmed why normalization was strictly necessary.
 
 ### 📂 Repository Structure
 
-│   README.md
-│   Replication_of_a_case_study.txt
-│   Sentiment_analysis.ipynb
+│───README.md
+│───Replication_of_a_case_study.txt
+│───Sentiment_analysis.ipynb
 │
 ├───Data
 │   ├───Approval
